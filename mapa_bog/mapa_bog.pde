@@ -54,7 +54,7 @@ if (lineColor.equals("SUBA")) {
           List<Feature> countries = GeoJSONReader.loadData(this, "421.geojson");
   List<Marker> countryMarkers = MapUtils.createSimpleMarkers(countries);
 //  SimplePointMarker paradaMarker = new SimplePointMarker(PointFeature.getLocations());
- map.addMarkers(countryMarkers);
+ //map.addMarkers(countryMarkers);
 
  }
 
@@ -104,6 +104,9 @@ SimpleLinesMarker connectionMarker = new SimpleLinesMarker(startLocation, endLoc
     fill(0);
    text(location.getLat() + ", " + location.getLon(), mouseX, mouseY);
   //     println(location.getLat() + ", " + location.getLon(), mouseX, mouseY);
+    if(key== 'v'){
+
+    }
     
  
 
