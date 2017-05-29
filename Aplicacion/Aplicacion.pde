@@ -34,7 +34,7 @@ void setup() {
          List marcadoreslocalidad = MapUtils.createSimpleMarkers(localidad);//listado de marcadores. localidades
          map.addMarkers(marcadoreslocalidad);//(unfolding método)____adiciona toda la lista de marcadores 
        // usuario= new Gregario();
-       
+
 
    puntos= new Puntos_determinacion ();
                   
@@ -47,42 +47,51 @@ void draw() {
     map.draw();
 /*
       if (key == 'c') { //carga el mapa nuevamente para retirar los marcadores de las localidades.
-         background(51);
+      
        map = new UnfoldingMap(this,new Microsoft.RoadProvider());
        Location bogotaLocation = new Location(4.6f, -74.08f); //localizadion central de la ciudad
        map.zoomAndPanTo(bogotaLocation, 10); 
        MapUtils.createDefaultEventDispatcher(this, map);
 
     }*/
-     if (mouseButton == RIGHT){
+
+       Location universidad = new Location(4.6328144, -74.08508);   ///marcador punto final siempre fijo en la universidad nacional
+       SimplePointMarker universidadMarker = new SimplePointMarker(universidad);
+       strokeWeight(16);
+       stroke(67, 211, 227, 100);
+       noFill();
+       ScreenPosition unPos = universidadMarker.getScreenPosition(map);
+       ellipse(unPos.x, unPos.y, 36, 36);
+       map.addMarker(universidadMarker);
+       text("punto final", unPos.x , unPos.y + 4);
+       
+       
+       if (mouseButton == RIGHT){
           a=1;
           if(a==1);
-puntos.punto_inicio();//hacer llamado al metodo puntos 
-    }
-    
-       float result[] = puntos.Funcion_pini();
+  
+  puntos.punto_encuentro();//llama a  punto encuentro para crear el marcador punto de encuentro sobre el marcador de la localidad seleccionada
      
-       Location bomba = new Location(result[0],result[1]);
-       SimplePointMarker bombaMarker = new SimplePointMarker(bomba);
-                  strokeWeight(16);
-    stroke(67, 211, 227, 100);
-    noFill();
-
-       ScreenPosition berlinPos = bombaMarker.getScreenPosition(map);
-  ellipse(berlinPos.x, berlinPos.y, 36, 36);
-  map.addMarker(bombaMarker);
-       text("punto de inicio", berlinPos.x , berlinPos.y + 4);
+    
+       float result[] = puntos.Funcion_pini();// llama a la funcion  result para obtener coordenadas X y Y del punto inicialx    
+       Location inicial = new Location(result[0],result[1]); 
+       SimplePointMarker inicialMarker = new SimplePointMarker(inicial);
+       strokeWeight(16);
+       stroke(67, 211, 227, 100);
+       noFill();
+       ScreenPosition pinicio = inicialMarker.getScreenPosition(map);
+       ellipse(pinicio.x, pinicio.y, 36, 36);
+       map.addMarker(inicialMarker);
+       text("punto de inicio", pinicio.x , pinicio.y + 4);
+       
+ 
              
 
 
 }
 
-
-    void mousePressed() {
-
-//Puntos_determinacion.p_inicio();//hacer llamado la clase puntos 
-
 }
+
 
 
 

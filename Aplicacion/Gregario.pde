@@ -22,7 +22,7 @@ int current1, graficar1;
 }
 
 void punto_inicio(){
- puntos.punto_inicio();
+// puntos.punto_inicio();
 
 }
 
