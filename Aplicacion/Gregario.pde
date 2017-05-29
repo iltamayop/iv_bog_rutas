@@ -13,12 +13,12 @@ private String nombre;
 
 int current1, graficar1;
 
-Puntos puntos; 
+
   
   Gregario(){
   current1 = 1;
   graficar1 = 2;
-  puntos= new Puntos();
+
 }
 
 void punto_inicio(){
@@ -33,7 +33,7 @@ return cyy;
 void p_encuentro(){
     
  // color col = 0;
- puntos.p_encuentro();
+ //puntos.p_encuentro();
 
 }
 
