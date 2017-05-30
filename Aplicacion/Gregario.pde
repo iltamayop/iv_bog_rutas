@@ -13,34 +13,20 @@ private String nombre;
 
 int current1, graficar1;
 
-
-  
-  Gregario(){
+ Gregario(){
   current1 = 1;
   graficar1 = 2;
 
 }
 
-void punto_inicio(){
-// puntos.punto_inicio();
 
-}
-
-float punto_final(float p){
-
-return cyy;
-}
-void p_encuentro(){
-    
- // color col = 0;
- //puntos.p_encuentro();
-
-}
 
 int  identificacion(){
+  id=1056295580;
   return id;
 }
 String nombre(){
+  nombre="Juan";
 return nombre;
 }
 

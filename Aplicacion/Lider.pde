@@ -12,20 +12,16 @@ private String nombre;
 
 
 int  identificacion(){
+  id=1052295587;
   return id;
 }
 String nombre(){
+  nombre="Andres";
 return nombre;
 }
-void punto_inicio(){
 
-}
 
-float punto_final(float p){
-return cy;
-}
-void p_encuentro(){
-}
+
 
 
 }

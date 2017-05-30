@@ -12,7 +12,7 @@ import java.util.List;
 
 
 UnfoldingMap map;// objeto mapa
-//Usuario usuario;
+Usuario usuario;
 Puntos_determinacion  puntos; 
 String nom;
 float puntoi;
@@ -83,16 +83,31 @@ void draw() {
        ellipse(pinicio.x, pinicio.y, 36, 36);
        map.addMarker(inicialMarker);
        text("punto de inicio", pinicio.x , pinicio.y + 4);
+       }
        
- 
-             
-
+      
 
 }
 
-}
+void keyPressed() {
+  if (key == ' ' ){
 
+ current = current <graficar ? current+1 : 1;
 
+  }
+   switch(current) {
+    case 1:
+    background  (255,180,89);
+   usuario = new Gregario ();
+    break;
+   case 2:
+   background  (random(100));
+  usuario =new Lider();
+    break;
+
+     }
+  println("ID USUARIO: "+usuario.identificacion()+"NOMBRE USUARIO: "+usuario.nombre());
+    }
 
 
 

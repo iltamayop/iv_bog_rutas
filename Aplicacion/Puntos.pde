@@ -40,7 +40,7 @@ void punto_encuentro(){
     String ads=marker.getStringProperty("NOMBRE");//del archivo local.geojson se identifica el nombre del marcador seleccionado (localidad)
     
     localidad=ads;
-    println(ads);
+//    println(ads);
 
 if(ads.equals("BOSA")){
   println(ads);
